@@ -2,6 +2,10 @@
 
 A Model Context Protocol (MCP) server that provides seamless integration with the Judgment API for AI evaluation workflows. This server enables you to manage datasets, run evaluations, and track traces directly from your MCP-compatible environment like Claude Desktop.
 
+## 🎥 Demo Video
+
+[![JudgmentLabs MCP Server Demo](https://github.com/user-attachments/assets/fb3d8c1f-3a77-4388-a38c-82e2d1b77b11)
+
 ## 🚀 Features
 
 ### 🎯 One-Click Installation
