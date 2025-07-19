@@ -234,6 +234,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Sezer Ufuk Yavuz**
 - Email: s.ufukyavuz@gmail.com
 - GitHub: [@suysoftware](https://github.com/suysoftware)
+- Linkedin: [@ufukyavuzz](https://www.linkedin.com/in/ufukyavuzz/)
+- X: [@sezerufukyavuz](https://x.com/sezerufukyavuz)
+
 
 ## 🙏 Acknowledgments
 
