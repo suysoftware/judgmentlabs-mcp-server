@@ -1,0 +1,101 @@
+{
+  "dxt_version": "0.1",
+  "name": "judgmentlabs-mcp-server",
+  "display_name": "JudgmentLabs MCP",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that provides seamless integration with the Judgment API for AI evaluation workflows. This server enables you to manage datasets, run evaluations, and track traces directly from your MCP-compatible environment.",
+  "author": {
+    "name": "Sezer Ufuk Yavuz",
+    "email": "s.ufukyavuz@gmail.com",
+    "url": "https://github.com/suysoftware"
+  },
+  "server": {
+    "type": "python",
+    "entry_point": "server.py",
+    "mcp_config": {
+      "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "args": [
+        "${__dirname}/server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "${__dirname}",
+        "JUDGMENT_API_KEY": "${user_config.JUDGMENT_API_KEY}",
+        "JUDGMENT_ORG_ID": "${user_config.JUDGMENT_ORG_ID}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "Get Trace",
+      "description": "Fetch a trace by its ID from the Judgment API"
+    },
+    {
+      "name": "Delete Trace",
+      "description": "Delete a trace by its ID from the Judgment API"
+    },
+    {
+      "name": "Run Evaluation",
+      "description": "Run an evaluation via the Judgment API"
+    },
+    {
+      "name": "Get Evaluation Results",
+      "description": "Fetch evaluation results for a project and evaluation run"
+    },
+    {
+      "name": "Get Dataset",
+      "description": "Pull a dataset by alias and project"
+    },
+    {
+      "name": "Push Dataset",
+      "description": "Push a dataset (examples + traces) to the Judgment API"
+    },
+    {
+      "name": "Delete Dataset",
+      "description": "Delete a dataset by alias and project"
+    },
+    {
+      "name": "Create Project",
+      "description": "Create a new project in the Judgment API"
+    },
+    {
+      "name": "Delete Project",
+      "description": "Delete a project and all its data in the Judgment API"
+    }
+  ],
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "python": ">=3.8"
+    }
+  },
+  "user_config": {
+    "JUDGMENT_API_KEY": {
+      "type": "string",
+      "title": "Your Judgment API Key",
+      "description": "Get from JudgmentLabs Dashboard",
+      "required": true,
+      "sensitive": true
+    },
+    "JUDGMENT_ORG_ID": {
+      "type": "string",
+      "title": "Your Judgment Organization ID",
+      "description": "Get from JudgmentLabs Dashboard",
+      "required": true,
+      "sensitive": true
+    }
+  },
+  "keywords": [
+    "judgment",
+    "judgmentlabs",
+    "agent monitoring"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suysoftware/judgmentlabs-mcp-server"
+  }
+}

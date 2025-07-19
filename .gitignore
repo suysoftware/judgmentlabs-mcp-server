@@ -1,0 +1,364 @@
+# ====================================================
+# Judgment MCP Server - .gitignore
+# ====================================================
+
+# ================== SENSITIVE DATA ==================
+# 🚨 CRITICAL: Never commit API keys or secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+config/secrets.*
+api_keys.txt
+# User-specific DXT configuration files
+user_config.json
+claude_desktop_config.json
+
+# ================== PYTHON ==================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib/*
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+conda-meta/
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ================== MCP SERVER SPECIFIC ==================
+# Server logs and debug files
+*.log
+debug.log
+server.log
+mcp_server.log
+trace_*.log
+
+# MCP server temporary files
+*.tmp
+*.temp
+.mcp_cache/
+mcp_temp/
+
+# Judgment API cache
+.judgment_cache/
+judgment_temp/
+
+# Server state files
+server_state.json
+session_*.json
+
+# ================== DXT EXTENSION SPECIFIC ==================
+# Built DXT files (these are generated, not source)
+*.dxt
+
+# DXT build artifacts
+.dxt_build/
+dxt_temp/
+extension_build/
+
+# Bundled dependencies (these should be rebuilt)
+lib/
+vendor/
+deps/
+
+# DXT development files
+.dxt_dev/
+manifest_dev.json
+
+# Extension testing
+test_extension/
+*.test.dxt
+
+# ================== NODEJS (for DXT CLI) ==================
+# If using Node.js for DXT tools
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ================== OPERATING SYSTEMS ==================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ================== EDITORS & IDEs ==================
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+.sublime-project
+.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+!*.svg
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+*~
+tags
+[._]*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ================== DEVELOPMENT TOOLS ==================
+# Pre-commit
+.pre-commit-config.yaml.backup
+
+# Git
+*.orig
+*.rej
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.tmp
+
+# Archive files
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.7z
+*.rar
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# ================== PROJECT SPECIFIC ==================
+# Judgment MCP Server specific ignores
+
+# Test data and temporary files
+test_data/
+temp_datasets/
+*.test.json
+
+# User-generated documentation
+docs/build/
+docs/_build/
+
+# Local configuration overrides
+local_config.py
+local_settings.py
+
+# Performance profiling
+*.prof
+requirements-dev.txt
+
+# ================== SECURITY NOTES ==================
+# 🔒 SECURITY REMINDERS:
+# - Never commit API keys, tokens, or passwords
+# - Review staged files before committing: git diff --staged
+# - Use environment variables for secrets
+# - Consider using git-secrets or similar tools
+# - Regularly audit committed files for leaked secrets
+
+# ================== KEEP THESE FILES ==================
+# Files that SHOULD be committed:
+# ✅ server.py (main MCP server code)
+# ✅ manifest.json (DXT configuration)  
+# ✅ requirements.txt (Python dependencies)
+# ✅ .pre-commit-config.yaml (code quality)
+# ✅ README.md (documentation)
+# ✅ .env.example (environment template)
+# ✅ icon.png (extension icon, if any)
+# ✅ tests/ (test files)
+# ✅ docs/ (documentation source)
+
+# ================== OPTIONAL INCLUDES ==================
+# Uncomment these if needed:
